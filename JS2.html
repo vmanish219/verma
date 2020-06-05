@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Dice Game</title>
+	<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+	<style>
+		body{
+			background-color: #5BA8E6;
+			color: white;
+			width: 940px;
+			margin: 0 auto;
+			text-align: center;
+			border: 2px solid;
+			height: 700px;
+			border-radius: 50px;
+			font-family: 'Acme', sans-serif;
+		}
+		h1{
+			font-size: 48px;
+			
+			margin: 0;
+			padding: 20px;
+		}
+
+		.main{
+			height: 650px;
+		}
+		p{
+			font-size: 40px;
+		}
+		button{
+  background-color: #B5CD2B; /* Green */
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button:hover {
+  background-color: white; 
+  color: #B5CD2B;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+	<h1>The Dice Game</h1>
+	<hr>
+	<p id="demo"></p>
+	<button onClick="window.location.reload();" class="button">Get New</button>
+</div>
+<hr>
+<footer>Created with Love by Manish </footer>
+</body>
+	<script type="text/javascript">
+		//alert('Welcome to the Page');
+		//https://www.w3schools.com/code/tryit.asp?filename=GFHPBL60WAKL
+		var d1=["1 ","2 ","3 ","4 "];
+		var d2=["v","e","r","z","a","x"];
+		var x,y,z,a ;
+		x= Math.floor(Math.random() * 4);
+		y=Math.floor(Math.random() * 6);
+		var str1 =d1[x];
+		var str2 =d2[y];
+   		var res = str1.concat(str2);
+		document.getElementById("demo").innerHTML = res;
+	</script>
+
+</html>
